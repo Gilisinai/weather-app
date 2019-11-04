@@ -8,14 +8,20 @@ router.get('/city/:cityName', function (req, res) {
     let cityName = req.params.cityName
     request(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=${apiKey}`, function (err, response) {
         let weather = JSON.parse(response.body)
-
-        res.send(weather)
+        let details = {
+            name: weather.name,
+            temperature: weather.main.temp,
+            condition: weather.weather[0].description,
+            conditionPic: weather.weather[0].icon
+        }
+        res.send(details)
     })
 })
 
 
 router.get('/cities', function (req, res) {
     City.find({}, function (err, cities) {
+        console.log(cities)
         res.send(cities)
     })
 })
