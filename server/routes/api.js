@@ -6,7 +6,7 @@ const apiKey = "d2f4b614a92855e8f8fedea0a0d367f4"
 
 router.get('/city/:cityName', function (req, res) {
     let cityName = req.params.cityName
-    request(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${apiKey}`, function (err, response) {
+    request(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=${apiKey}`, function (err, response) {
         let weather = JSON.parse(response.body)
 
         res.send(weather)
