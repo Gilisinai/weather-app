@@ -18,9 +18,9 @@ class TempManager {
     }
 
      saveCity (cityName) {
-        let cityToSave = this.cityData.find(c => c.name = cityName)
+        let cityToSave = this.cityData.find(c => c.name === cityName)
         console.log(cityToSave)
-        return $.post('/city', cityToSave)
+         $.post('/city', cityToSave)
 
     }
 
@@ -29,7 +29,7 @@ class TempManager {
             url: `/city/${cityName}`,
             type: 'DELETE',
             success: () => {
-                let cityToDlete = this.cityData.find(c => c.name = cityName)
+                let cityToDlete = this.cityData.find(c => c.name === cityName)
                 console.log(cityToDlete)
                
             }

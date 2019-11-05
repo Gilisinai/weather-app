@@ -18,9 +18,9 @@ $('#search').on('click', async function() {
     renderer.renderData(tempManager.cityData)
 })
 
-$('.cities-container').on('click', '.save', async function() {
-    let cityName = $(this).closest(".city").find(".cityName").text()
-    await tempManager.saveCity(cityName)
+$('.cities-container').on('click', '.save',  function() {
+    let cityName = $(this).closest(".city").find("span").text()
+     tempManager.saveCity(cityName)
     renderer.renderData(tempManager.cityData)
 })
 

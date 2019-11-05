@@ -17,7 +17,7 @@
         {{#each cities}}
         <div class="city">
             <div class="cityName">
-                    {{name}} 
+                   <span>{{name}}</span> 
             </div>
             <div class="temp">
                   Current temperature:   {{temperature}}
@@ -26,7 +26,7 @@
                 Condition : {{condition}}
            </div>
            <div class="pic">
-                {{conditionPic}}
+               <img src="http://openweathermap.org/img/wn/{{conditionPic}}@2x.png" >
            </div>
            <button class="save"> save </button>
            <button class="remove" >remove </button>
