@@ -8,10 +8,21 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <input placeholder="Enter city">
-    <button id="search">Find</button>
+    <div id="search-container">
+        <div id="input">
+                <input placeholder="Enter city">
+        </div>
+        <div id="search">
+                <button>Find</button>
+        </div>
+            
 
-    <div class="cities-container"></div>
+    </div>
+    
+
+    <div class="cities-container">
+           
+    </div>
 
     <script id="first-template" type="text/x-handlebars-template">
         {{#each cities}}

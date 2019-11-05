@@ -19,6 +19,8 @@ router.get('/city/:cityName', function (req, res) {
 })
 
 
+
+
 router.get('/cities', function (req, res) {
     City.find({}, function (err, cities) {
         console.log(cities)

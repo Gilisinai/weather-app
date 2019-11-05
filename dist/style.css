@@ -1,3 +1,31 @@
+body {
+    background: ;
+}
+
+.cities-container {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr   ;
+  
+}
+
+
+#search-container {
+   display: grid;
+   height: 10vh;
+   grid-template-columns: 5fr 1fr;
+   grid-template-rows: 1fr;
+   
+
+}
+
+
 .city {
+    
     border: 1px solid black;
+    margin: 3px;
+    border-radius: 3px;
+    padding: 5px;
+    
 }
