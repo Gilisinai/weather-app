@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeatherApp</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div id="search-container">
-        <div id="input">
+        
                 <input placeholder="Enter city">
-        </div>
-        <div id="search">
+        
+        
                 <button>Find</button>
-        </div>
+        
             
 
     </div>
@@ -26,21 +27,22 @@
 
     <script id="first-template" type="text/x-handlebars-template">
         {{#each cities}}
-        <div class="city">
+        <div class="city" style="background-image: url({{img}})">
             <div class="cityName">
                    <span>{{name}}</span> 
             </div>
             <div class="temp">
-                  Current temperature:   {{temperature}}
+                     {{temperature}}&#176
             </div>
            <div class="condition">
-                Condition : {{condition}}
+                {{condition}}
            </div>
            <div class="pic">
                <img src="http://openweathermap.org/img/wn/{{conditionPic}}@2x.png" >
            </div>
-           <button class="save"> save </button>
-           <button class="remove" >remove </button>
+           
+           <button class="option"> save </button>
+           <button class="option" >remove </button>
           
         </div>
         {{/each}}

@@ -5,7 +5,8 @@ const citySchema = new Schema({
     name: { type: String, required: true, unique: true },
     temperature: Number,
     condition: String,
-    conditionPic: String
+    conditionPic: String,
+    img: String
 })
 
 const City = mongoose.model("city", citySchema)

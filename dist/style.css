@@ -1,10 +1,19 @@
 body {
-    background: ;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  
+  font-weight: bold;
+}
+
+.place{
+    max-width: 300px;
+    max-height: 300px;
 }
 
 .cities-container {
     height: 80vh;
     display: grid;
+    justify-self: center;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr   ;
   
@@ -13,19 +22,55 @@ body {
 
 #search-container {
    display: grid;
-   height: 10vh;
-   grid-template-columns: 5fr 1fr;
-   grid-template-rows: 1fr;
+   justify-self: center;
+   height: 5vh;
+   grid-template-columns: 4fr 1fr;
+   grid-template-areas: 
+   "i s";
+    margin-bottom: 5%;
    
 
+}
+
+input{
+    grid-area: i ;
+    border: none;
+    box-shadow: 1px 1px 3px #0a1612;
+    
+}
+
+button{
+    grid-area: s;
+}
+
+#search{
+ grid-area: s;
 }
 
 
 .city {
     
-    border: 1px solid black;
+    color: white;
     margin: 3px;
-    border-radius: 3px;
-    padding: 5px;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    padding: 8px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    box-shadow: 1px 1px 3px #0a1612;
+    opacity: 0.75;
     
+}
+
+.cityName {
+    font-size: x-large; 
+}
+
+.option{
+    background-color: transparent;
+    border-radius: 5%;
+    border: 0.5px solid white;
+    width: 70px;
+    height: 25px;
+    color: white;
 }
