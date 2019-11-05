@@ -5,7 +5,7 @@ const path = require('path')
 const bodyParser = require("body-parser")
 // Mongoose setup
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/weatherDB', { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/weatherDB', { useNewUrlParser: true })
 
 
 app.use(bodyParser.json())
@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, './node_modules')))
 app.use('/', api)
 
 
-const port = 4200
+const port = process.env.PORT || 4200
 app.listen(port, function () {
     console.log(`Running on port ${port}`)
 })
