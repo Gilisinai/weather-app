@@ -32,11 +32,11 @@ router.post('/city', function (req, res) {
     res.send("city saved to db")
 })
 
-router.delete('/city/:cityName', function (req, res) {
-    let cityToDelete = req.params.cityName
-    City.findOneAndDelete({name: cityToDelete}, function(err, city) {
-        res.send(`${cityToDelete} deleted from db`)
-    })
+router.delete('/city', function (req, res) {
+    let cityToDelete = req.body.city
+    City.findOneAndDelete({ 
+        name: cityToDelete 
+    }).then(res.end())
 
 
 })

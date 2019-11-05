@@ -25,7 +25,7 @@ $('.cities-container').on('click', '.save',  function() {
 })
 
 $('.cities-container').on('click', '.remove', function() {
-    let cityName = $(this).closest(".city").find(".cityName").text()
+    let cityName = $(this).closest(".city").find("span").text()
     tempManager.removeCity(cityName)
     renderer.renderData(tempManager.cityData)
 })
